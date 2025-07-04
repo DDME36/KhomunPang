@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>บริการจัดการข้อมูล Excel ขนาดใหญ่ด้วย AI และ Python | KhomunPang - ผู้เชี่ยวชาญด้านข้อมูล</title>
+    <meta name="description" content="บริการจัดการข้อมูล Excel นับล้านแถว วิเคราะห์ข้อมูลด้วย AI และ Python รวมไฟล์หลายร้อย กรองและจัดเรียงข้อมูล สร้างรายงานอัตโนมัติ คิดค่าบริการตามงาน ไม่มีค่าบำรุงรักษา">
+    <meta name="keywords" content="จัดการข้อมูล Excel, วิเคราะห์ข้อมูล, Python ข้อมูล, AI ข้อมูล, Big Data Thailand, Excel automation, ข้อมูลขนาดใหญ่, รายงานอัตโนมัติ, KhomunPang, บริการข้อมูล">
+    <meta name="author" content="KhomunPang Data Solutions">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Thai">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://github.com/DDME36/KhomunPang/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/DDME36/KhomunPang/">
+    <meta property="og:title" content="บริการจัดการข้อมูล Excel ขนาดใหญ่ด้วย AI และ Python | KhomunPang">
+    <meta property="og:description" content="เชี่ยวชาญการจัดการข้อมูล Excel นับล้านแถว ด้วยเทคโนโลยี AI และ Python คิดค่าบริการตามงาน ไม่มีค่าใช้จ่ายคงที่">
+    <meta property="og:image" content="https://github.com/DDME36/KhomunPang/og-image.jpg">
+    <meta property="og:site_name" content="KhomunPang Data Solutions">
+    <meta property="og:locale" content="th_TH">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/DDME36/KhomunPang/">
+    <meta property="twitter:title" content="บริการจัดการข้อมูล Excel ขนาดใหญ่ด้วย AI และ Python">
+    <meta property="twitter:description" content="เชี่ยวชาญการจัดการข้อมูล Excel นับล้านแถว ด้วยเทคโนโลยี AI และ Python">
+    <meta property="twitter:image" content="https://github.com/DDME36/KhomunPang/og-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "KhomunPang Data Solutions",
+      "description": "บริการจัดการและวิเคราะห์ข้อมูล Excel ขนาดใหญ่ด้วยเทคโนโลยี AI และ Python",
+      "url": "https://github.com/DDME36/KhomunPang",
+      "telephone": "+66-xxx-xxx-xxxx",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "TH",
+        "addressLocality": "Thailand"
+      },
+      "sameAs": [
+        "https://line.me/ti/p/FY_E24MWyp"
+      ],
+      "serviceType": "Data Management and Analysis",
+      "areaServed": "Thailand",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Data Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "จัดการข้อมูลขนาดใหญ่",
+              "description": "รองรับข้อมูลนับล้านแถว รวมข้อมูลจากหลายแหล่ง"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "วิเคราะห์ข้อมูลด้วย AI",
+              "description": "ใช้ AI ในการวิเคราะห์รูปแบบข้อมูลและค้นหาข้อมูลเชิงลึก"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "สร้างรายงานอัตโนมัติ",
+              "description": "สร้างรายงานและกราฟที่สวยงาม พร้อมระบบอัปเดตอัตโนมัติ"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Prompt', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #e0e7ff 100%);
+            overflow-x: hidden;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        /* Animated background */
+        .bg-animated {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            mix-blend-mode: multiply;
+            animation: blob 7s infinite;
+            opacity: 0.2;
+        }
+        
+        .blob-1 {
+            top: -5%;
+            left: -5%;
+            width: 300px;
+            height: 300px;
+            background: #a855f7;
+        }
+        
+        .blob-2 {
+            top: -5%;
+            right: -5%;
+            width: 300px;
+            height: 300px;
+            background: #fbbf24;
+            animation-delay: 2s;
+        }
+        
+        .blob-3 {
+            bottom: -10%;
+            left: 10%;
+            width: 300px;
+            height: 300px;
+            background: #ec4899;
+            animation-delay: 4s;
+        }
+        
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: #6b7280;
+        }
+        
+        /* Navigation */
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+        
+        .btn-success {
+            background: #10b981;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #10b981;
+            color: #10b981;
+        }
+        
+        .btn-outline:hover {
+            background: #f0fdf4;
+            transform: translateY(-2px);
+        }
+        
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 0.25rem;
+            padding: 0.5rem;
+            background: #f3f4f6;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        
+        .mobile-menu-btn span {
+            width: 20px;
+            height: 2px;
+            background: #374151;
+        }
+        
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 1rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: #1d4ed8;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb, #7c3aed, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .gradient-text-green {
+            background: linear-gradient(135deg, #10b981, #059669);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-description {
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            color: #4b5563;
+            max-width: 4xl;
+            margin: 0 auto 3rem auto;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+        
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .floating-icon {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(2) { animation-delay: 0.5s; }
+        .floating-icon:nth-child(3) { animation-delay: 1s; }
+        .floating-icon:nth-child(4) { animation-delay: 1.5s; }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        /* Services Section */
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .section-description {
+            font-size: 1.25rem;
+            color: #4b5563;
+            text-align: center;
+            max-width: 48rem;
+            margin: 0 auto 4rem auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, #dbeafe, #e0e7ff);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #3b82f6, #7c3aed);
+        }
+        
+        .service-card:hover .service-icon svg {
+            color: white !important;
+        }
+        
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .service-description {
+            color: #4b5563;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .feature-list {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #1f2937;
+        }
+        
+        .feature-description {
+            color: #4b5563;
+            line-height: 1.6;
+        }
+        
+        /* Contact Section */
+        .contact-card {
+            max-width: 28rem;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+            border: 2px solid #10b981;
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+        }
+        
+        .contact-icon {
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, #10b981, #059669);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem auto;
+            color: white;
+        }
+        
+        .contact-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+        
+        .contact-description {
+            color: #4b5563;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: #111827;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo-icon {
+            width: 2rem;
+            height: 2rem;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .footer-logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-description {
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+        
+        /* Responsive */
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+            
+            .container {
+                padding: 0 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-desktop {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            .mobile-menu.active {
+                display: flex;
+            }
+            
+            .hero-icons {
+                gap: 1rem;
+            }
+            
+            .floating-icon {
+                padding: 0.75rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .feature-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        /* Utility classes */
+        .hidden {
+            display: none;
+        }
+        
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animated">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i data-lucide="cpu"></i>
+                    </div>
+                    <div>
+                        <div class="logo-text">KhomunPang</div>
+                        <div class="logo-subtitle">AI & Data Solutions</div>
+                    </div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#services" class="nav-link">บริการของเรา</a>
+                    <a href="#features" class="nav-link">จุดเด่น</a>
+                    <a href="#contact" class="nav-link">ติดต่อเรา</a>
+                    <a href="#contact" class="btn btn-success">
+                        <i data-lucide="message-circle"></i>
+                        ติดต่อ Line
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <a href="#services" class="nav-link" onclick="closeMobileMenu()">บริการของเรา</a>
+                <a href="#features" class="nav-link" onclick="closeMobileMenu()">จุดเด่น</a>
+                <a href="#contact" class="nav-link" onclick="closeMobileMenu()">ติดต่อเรา</a>
+                <a href="#contact" class="btn btn-success" onclick="closeMobileMenu()">
+                    <i data-lucide="message-circle"></i>
+                    ติดต่อ Line
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">
+                <i data-lucide="star"></i>
+                ผู้เชี่ยวชาญด้านการจัดการข้อมูลขนาดใหญ่
+            </div>
+            
+            <h1 class="hero-title">
+                <span class="gradient-text">จัดการข้อมูล Excel<br>ขนาดใหญ่ด้วย</span><br>
+                <span class="gradient-text-green">AI และ Python</span>
+            </h1>
+            
+            <p class="hero-description">
+                <strong>เชี่ยวชาญการจัดการข้อมูลนับล้านแถว</strong> ด้วยเทคโนโลยีขั้นสูง<br>
+                รวมข้อมูลจากหลายแหล่ง กรองและจัดเรียงตามความต้องการ วิเคราะห์และสร้างรายงานที่มีประโยชน์<br>
+                <span class="gradient-text">คิดค่าบริการตามงาน ไม่มีค่าใช้จ่ายคงที่</span>
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    ดูบริการของเรา
+                    <i data-lucide="arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <i data-lucide="message-circle"></i>
+                    ติดต่อผ่าน Line
+                </a>
+            </div>
+            
+            <!-- Floating Icons -->
+            <div class="hero-icons">
+                <div class="floating-icon">
+                    <i data-lucide="database" style="width: 48px; height: 48px; color: #2563eb;"></i>
+                </div>
+                <div class="floating-icon">
+                    <i data-lucide="bot" style="width: 48px; height: 48px; color: #7c3aed;"></i>
+                </div>
+                <div class="floating-icon">
+                    <i data-lucide="code" style="width: 48px; height: 48px; color: #10b981;"></i>
+                </div>
+                <div class="floating-icon">
+                    <i data-lucide="line-chart" style="width: 48px; height: 48px; color: #6366f1;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text">บริการของเรา</span>
+            </h2>
+            <p class="section-description">
+                ใช้เทคโนโลยี AI และ Python ในการจัดการข้อมูลขนาดใหญ่ ประมวลผลข้อมูลซับซ้อน
+                และสร้างรายงานที่มีประโยชน์สำหรับการตัดสินใจทางธุรกิจ
+            </p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="database" style="width: 32px; height: 32px; color: #2563eb;"></i>
+                    </div>
+                    <h3 class="service-title">จัดการข้อมูลขนาดใหญ่</h3>
+                    <p class="service-description">
+                        รองรับข้อมูลนับล้านแถว รวมข้อมูลจากหลายแหล่งเข้าด้วยกันได้อย่างมีประสิทธิภาพ
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            รวมไฟล์ Excel หลายร้อยไฟล์
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            ประมวลผลข้อมูลล้านแถวใน Excel
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            ทำความสะอาดข้อมูลอัตโนมัติ
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="bot" style="width: 32px; height: 32px; color: #2563eb;"></i>
+                    </div>
+                    <h3 class="service-title">AI ช่วยวิเคราะห์ข้อมูล</h3>
+                    <p class="service-description">
+                        ใช้ AI ในการวิเคราะห์รูปแบบข้อมูล ค้นหาข้อมูลเชิงลึก และสร้างความเข้าใจจากข้อมูลซับซ้อน
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            วิเคราะห์แนวโน้มด้วย AI
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            ค้นหาความผิดปกติในข้อมูล
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            สร้างสรุปข้อมูลอัตโนมัติ
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="code" style="width: 32px; height: 32px; color: #2563eb;"></i>
+                    </div>
+                    <h3 class="service-title">Python สำหรับข้อมูล</h3>
+                    <p class="service-description">
+                        ใช้ Python ในการประมวลผลข้อมูลซับซ้อน สร้างสคริปต์อัตโนมัติ และเชื่อมต่อกับระบบต่างๆ
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            สคริปต์ประมวลผลอัตโนมัติ
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            เชื่อมต่อฐานข้อมูลและ API
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            สร้างรายงานแบบ Real-time
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="filter" style="width: 32px; height: 32px; color: #2563eb;"></i>
+                    </div>
+                    <h3 class="service-title">กรองและจัดเรียงข้อมูล</h3>
+                    <p class="service-description">
+                        ระบบกรองข้อมูลขั้นสูงตามเงื่อนไขที่ซับซ้อน จัดเรียงข้อมูลตามความต้องการของลูกค้า
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            กรองข้อมูลตามเงื่อนไขซับซ้อน
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            จัดเรียงข้อมูลหลายระดับ
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            สร้างมุมมองข้อมูลแบบต่างๆ
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="bar-chart-3" style="width: 32px; height: 32px; color: #2563eb;"></i>
+                    </div>
+                    <h3 class="service-title">สร้างรายงานและกราฟ</h3>
+                    <p class="service-description">
+                        สร้างรายงานที่สวยงามและกราฟที่เข้าใจง่าย พร้อมระบบอัปเดตอัตโนมัติ
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            กราฟและแผนภูมิโต้ตอบได้
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            รายงานอัตโนมัติประจำวัน
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            Dashboard สำหรับผู้บริหาร
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i data-lucide="zap" style="width: 32px; height: 32px; color: #2563eb;"></i>
+                    </div>
+                    <h3 class="service-title">ระบบอัตโนมัติ</h3>
+                    <p class="service-description">
+                        สร้างระบบที่ทำงานอัตโนมัติ ลดเวลาในการทำงานซ้ำๆ และลดความผิดพลาดจากการทำงานด้วยมือ
+                    </p>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            ระบบประมวลผลตามตารางเวลา
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            แจ้งเตือนผ่าน Email/Line
+                        </li>
+                        <li class="feature-item">
+                            <i data-lucide="check-circle" style="width: 16px; height: 16px; color: #10b981;"></i>
+                            สำรองข้อมูลอัตโนมัติ
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section" style="background: rgba(255, 255, 255, 0.5);">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text-green">ทำไมต้องเลือกเรา</span>
+            </h2>
+            <p class="section-description">
+                เราให้บริการที่ยืดหยุ่น มีประสิทธิภาพ และเข้าถึงได้ง่าย
+            </p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div>
+                        <i data-lucide="check-circle" style="width: 24px; height: 24px; color: #10b981;"></i>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">ไม่มีค่าใช้จ่ายคงที่</h3>
+                        <p class="feature-description">
+                            คิดค่าบริการตามปริมาณงานจริง ไม่มีค่าบำรุงรักษารายเดือน
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <i data-lucide="check-circle" style="width: 24px; height: 24px; color: #10b981;"></i>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">เทคโนโลยีขั้นสูง</h3>
+                        <p class="feature-description">
+                            ใช้เครื่องมือและเทคโนโลยีที่ทันสมัย ทำให้ได้ผลลัพธ์ที่แม่นยำและรวดเร็ว
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <i data-lucide="check-circle" style="width: 24px; height: 24px; color: #10b981;"></i>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">รองรับข้อมูลขนาดใหญ่</h3>
+                        <p class="feature-description">
+                            จัดการข้อมูลนับล้านแถวได้อย่างมีประสิทธิภาพ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div>
+                        <i data-lucide="check-circle" style="width: 24px; height: 24px; color: #10b981;"></i>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">ติดต่อง่ายผ่าน Line</h3>
+                        <p class="feature-description">
+                            สะดวกในการติดต่อและปรึกษาปัญหาผ่าน Line ตลอด 24 ชั่วโมง
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="gradient-text-green">พร้อมเริ่มต้นแล้วหรือยัง?</span>
+            </h2>
+            <p class="section-description">
+                สนใจบริการหรือต้องการข้อมูลเพิ่มเติม? ติดต่อเราผ่าน Line เพื่อรับคำปรึกษาฟรี
+            </p>
+            
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i data-lucide="message-circle" style="width: 40px; height: 40px;"></i>
+                </div>
+                <h3 class="contact-title">ติดต่อผ่าน Line</h3>
+                <p class="contact-description">
+                    ปรึกษาเรื่องข้อมูลที่ต้องการจัดการ เราจะวิเคราะห์และเสนอวิธีแก้ปัญหาที่เหมาะสม
+                </p>
+                <a href="https://line.me/ti/p/FY_E24MWyp" target="_blank" class="btn btn-success" style="font-size: 1.125rem; padding: 1rem 2rem;">
+                    <i data-lucide="message-circle"></i>
+                    เริ่มคุยกับ DOME
+                </a>
+                <p class="contact-info">
+                    Line ID: @dome_khomunpang
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <div class="footer-logo-icon">
+                    <i data-lucide="cpu" style="width: 20px; height: 20px; color: white;"></i>
+                </div>
+                <div class="footer-logo-text">KhomunPang</div>
+            </div>
+            <p class="footer-description">
+                บริการจัดการและวิเคราะห์ข้อมูลด้วย AI และ Python
+            </p>
+            <p class="footer-copyright">
+                © 2025 KhomunPang. สงวนลิขสิทธิ์ทุกการใช้งาน | ติดต่อผ่าน Line เท่านั้น
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    closeMobileMenu();
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.8)';
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe service cards and feature cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.service-card, .feature-card');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(card);
+            });
+        });
+
+        // Add click effect to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // Create ripple effect
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple-effect');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Add CSS for ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .btn {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .ripple-effect {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            }
+            
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
